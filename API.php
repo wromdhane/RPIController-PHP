@@ -39,7 +39,7 @@
 				{
 					if(!is_dir("./config/".$file))
 					{
-						$file_content = file_get_contents("./scripts/".$file);
+						$file_content = file_get_contents("./config/".$file);
 						$json = json_decode($file_content);
 						$script = array("id" => $file, "name" => $json->name, "args" => $json->args);
 						$script_list[$nb_files] = $script;
