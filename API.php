@@ -1,6 +1,6 @@
 <?php
-  class API{
-    public function connect($data){
+	class API{
+    		public function connect($data){
 			if(isset($data["user"]) && isset($data["password"])){
 				$user = $data["user"];
 				$password = $data["password"];
@@ -34,10 +34,10 @@
 		public function executeGET(){
 			$nb_files = 0;
 			$script_list = array();
-			if($directory = opendir("./scripts")){
+			if($directory = opendir("./config")){
 				while(false !== ($file = readdir($directory)))
 				{
-					if(!is_dir("./scripts/".$file))
+					if(!is_dir("./config/".$file))
 					{
 						$file_content = file_get_contents("./scripts/".$file);
 						$json = json_decode($file_content);
@@ -56,5 +56,5 @@
 				echo $json;
 			}
 		}
-  }
+	}
 ?>
