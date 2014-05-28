@@ -1,0 +1,48 @@
+{
+	"result":[
+		{
+			"id": "ls.json",
+			"name": "List files",
+			"args":[
+				{
+					"name": "argX",
+					"type": "list",
+					"message": "Folder name",
+					"value":[]
+				}
+			]
+		},
+		{
+			"id": "mkdir.json",
+			"name": "Create directory",
+			"args":[
+				{
+					"name": "arg0",
+					"type": "string",
+					"message": "Folder name",
+					"value":[]
+				},
+				{
+					"name": "argX",
+					"type": "list",
+					"message": "Folder name",
+					"value":[]
+				}
+			]
+		},
+		{
+			"id": "mpc_command.json",
+			"name": "Media Controller",
+			"args":[
+				{
+					"name": "arg0",
+					"type": "string",
+					"message": "Folder",
+					"value":["play", "pause", "next", "prev"]
+				}
+			]
+		}
+	],
+	
+	"error": ""
+}

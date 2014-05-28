@@ -1,0 +1,9 @@
+{
+	"user": "mehdi",
+	"password": "kes",
+	"id": "mkdir.json",
+	"args":{
+		"arg0": "/home/pi/MonDossier1",
+		"argX": ["/home/pi/MonDossier2","/home/pi/MonDossier3"]
+	}
+}
