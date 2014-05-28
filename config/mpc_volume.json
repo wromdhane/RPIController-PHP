@@ -1,0 +1,19 @@
+{
+	"name": "Volume",
+	"path": "/usr/bin/mpc",
+	"command": "%arg0% %arg1%",
+	"args": [
+		{
+			"name": "arg0",
+			"type": "string",
+			"message": "UP or DOWN",
+			"value":["+", "-"]
+		},
+		{
+			"name": "arg1",
+			"type": "int",
+			"message": "Value",
+			"value":["0", "25","50", "75", "100"]
+		}
+	]
+}

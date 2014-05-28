@@ -1,0 +1,19 @@
+{
+	"name": "Create directory",
+	"path": "/bin/mkdir",
+	"command": "%arg0% %argX%",
+	"args": [
+		{
+			"name": "arg0",
+			"type": "string",
+			"message": "Folder name",
+			"value":[]
+		}
+		{
+			"name": "argX",
+			"type": "list",
+			"message": "Folder name",
+			"value":[]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "Insert file",
+	"path": "/usr/bin/mpc",
+	"command": "insert %arg0% %argX%",
+	"args": [
+		{
+			"name": "arg0",
+			"type": "string",
+			"message": "File name",
+			"value":[]
+		},
+		{
+			"name": "argX",
+			"type": "list",
+			"message": "File name",
+			"value":[]
+		}
+	]
+}

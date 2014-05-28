@@ -1,0 +1,13 @@
+{
+	"name": "Media Controller",
+	"path": "/usr/bin/mpc",
+	"command": "%arg0%",
+	"args": [
+		{
+			"name": "arg0",
+			"type": "string",
+			"message": "Action",
+			"value":["play", "pause", "next", "prev"]
+		}
+	]
+}

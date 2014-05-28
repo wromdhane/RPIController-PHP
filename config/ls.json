@@ -1,0 +1,13 @@
+{
+	"name": "List files",
+	"path": "/bin/ls",
+	"command": "%argX%",
+	"args": [
+		{
+			"name": "argX",
+			"type": "list",
+			"message": "Folder",
+			"value":[]
+		}
+	]
+}

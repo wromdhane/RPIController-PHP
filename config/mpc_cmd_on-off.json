@@ -1,0 +1,19 @@
+{
+	"name": "Repeat",
+	"path": "/usr/bin/mpc",
+	"command": "%arg0% %arg1%",
+	"args": [
+		{
+			"name": "arg0",
+			"type": "string",
+			"message": "Commande",
+			"value":["random", "repeat", "single", "consume"]
+		},
+		{
+			"name": "arg1",
+			"type": "string",
+			"mesage": "Valeur",
+			"value":["ON", "OFF"]
+		}
+	]
+}
