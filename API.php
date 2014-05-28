@@ -56,5 +56,21 @@
 				echo $json;
 			}
 		}
+		
+		public function executeRUN($data){
+			if(isset($data["id"]) && isset($data["args"])){
+				$command = buildCommandLine($data);
+				if($command != null){
+					exec($command, $output, $return);
+					$result = array("result" => $result, "error" => "");
+					$json = json_encode($result);
+					echo $json;
+				}
+			}else{
+				$result = array("result" => "", "error" => "requete mal construite");
+				$json = json_encode($result);
+				echo $json;
+			}
+		}
 	}
 ?>
