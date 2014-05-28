@@ -75,7 +75,20 @@
 				$args = $service["args"];
 				$received = $data["args"];
 				if(sizeof($received) == sizeof($args)){
-					// to do !!
+					while preg_match("^%(.+)%$", $command, $matches){
+						for($i=0; $i<sizeof($args); $i++){
+							$args[$i]=$matches[i];
+						}
+						foreach ($args as $key => $value){
+							$key = str_replace("%", "", $value);
+							str_replace($value, $data["args"][$key], $command);
+						}
+
+
+				}
+					$commandd = $service["path"]." ".$command;
+					return $commandd;
+					
 				}else{
 					$result = array("result" => "", "error" => "Les arguments ne sont pas coherents");
 					$json = json_encode($result);
