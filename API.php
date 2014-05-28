@@ -57,6 +57,37 @@
 			}
 		}
 		
+		private function getService($id){
+			if(file_exists("./config/".$id)){
+				$file_content = file_get_contents("./config/".$id);
+				$json = json_decode($file_content, true);
+				return $json;
+			}else{
+				return null;
+			}
+		}
+
+		private function buildCommandLine($data){
+			$id = $data["id"];
+			$service = $this->getService($id);
+			if($service != null){
+				$commad = $service["command"];
+				$args = $service["args"];
+				$received = $data["args"];
+				if(sizeof($received) == sizeof($args)){
+					// to do !!
+				}else{
+					$result = array("result" => "", "error" => "Les arguments ne sont pas coherents");
+					$json = json_encode($result);
+					echo $json;
+				}
+			}else{
+				$result = array("result" => "", "error" => "Le service demandé est inéxistant");
+				$json = json_encode($result);
+				echo $json;
+			}
+		}
+		
 		public function executeRUN($data){
 			if(isset($data["id"]) && isset($data["args"])){
 				$command = buildCommandLine($data);
